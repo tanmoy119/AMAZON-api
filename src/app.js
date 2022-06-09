@@ -27,7 +27,7 @@ const port = process.env.PORT;
 
 
 // require db ..
-require("./db/con");
+require("./db/conn");
 
 
 app.use(cartRouter);
