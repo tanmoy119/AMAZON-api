@@ -1,10 +1,11 @@
 const path = require('path');
-require('dotenv').config({path: '../.env'})
+require('dotenv').config()
 const express = require('express');
 const app = express();
 const cors = require('cors');
 app.use(express.json());
 const cartRouter = require('./routers/cart');
+const productRouter = require("./routers/product")
 
 const allowedOrigins = ["http://localhost:3000","http://localhost:5000"];
 
@@ -31,6 +32,7 @@ require("./db/conn");
 
 
 app.use(cartRouter);
+app.use(productRouter);
 
 
 
